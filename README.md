@@ -1,35 +1,35 @@
-# WSO2 Developer’s Guide
-This is the code repository for [WSO2 Developer’s Guide](https://www.packtpub.com/networking-and-servers/wso2-developers-guide?utm_source=github&utm_medium=repository&utm_campaign=9781787288317), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
+# Learning Angular - Second Edition
+This is the code repository for [Learning Angular - Second Edition](https://www.packtpub.com/web-development/learning-angular-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781787124929), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
 ## About the Book
-This book will help you explore the various capabilities of WSO2, from simple and generic
-to more complex and powerful. It will give you an introduction to a service-oriented
-architecture in general and is focused on the WSO2 world in order to put into context the
-principles and the target area where we can apply the knowledge and the techniques
-outlined in the book. This book will help the reader understand the SOA architecture even
-without any prior knowledge of it, making the book readable for everyone interested in
-learning to develop with WSO2 servers, with or without prior experience.
+The latest version of Angular comes with a lot of new features that help you to make your applications smaller and faster. This book will show you how to set up an Angular project, and you’ll build Angular components right from the beginning.
+
+Moving on, you’ll explore and work with the components to build your app. Next, you’ll find out more about TypeScript and see how to use it to build apps in the best way possible. You’ll then be introduced to the building blocks - Properties, Events, Directives, and Pipes - and how it can be used to implement and enhance the components.
+
+Additionally, you’ll be using Angular components to organize your components in a scalable way. Then you’ll understand how to get data in your app and add navigation to it. Furthermore, you’ll deep dive and work with Forms, Authentication, and see how Material design will help you make your app beautiful in just a few short lines of code. Lastly, you’ll see how to use animating components with Angular, and test and debug the app.
+
+All in all, the overall mission is to give you a great start when developing apps using Angular and TypeScript.
 ## Instructions and Navigation
 All of the code is organized into folders. Each folder starts with a number followed by the application name. For example, Chapter02.
 
-
+Code files are not present in 2,3, Appendix A, B
 
 The code will look like the following:
 ```
-<messageFormattercontentType="application/json"
-class="org.wso2.carbon.integrator.core.json.JsonStreamFormatter"/>
-<messageBuildercontentType="application/json"
-class="org.wso2.carbon.integrator.core.json.JsonStreamBuilder"/>
+class AppComponent {
+  title:string = 'hello app';
+}
 ```
 
-This book will guide you through the installation of all the tools that you require to follow
-the examples 
+To really appreciate this book, we assume that you are familiar with HTML, CSS, and JavaScript, to a certain degree, as well as calling services with AJAX. We also assume that you have a fair understanding of REST. Modern web application development has become quite a daunting task, but it is our hope that you will, after having read this book, feel that you understand more about what's going on, and that you will also feel more than able to take on your next web development project using Angular.
+
+As you will spend most of your time writing JavaScript, HTML, or CSS code, we only assume that you have access to a decent text editor. The more accomplished editor you use, the more help you will get, which is why we introduce some plugins and best practices in this book to make your everyday work less painful.
 
 ## Related Products
-* [Enterprise Integration with WSO2 ESB](https://www.packtpub.com/application-development/enterprise-integration-wso2-esb?utm_source=github&utm_medium=repository&utm_campaign=9781783280193)
+* [Full Stack Angular for Java Developers](https://www.packtpub.com/web-development/full-stack-angular-java-developers?utm_source=github&utm_medium=repository&utm_campaign=9781786462909)
 
-* [Getting Started with Oracle WebLogic Server 12c: Developer’s Guide](https://www.packtpub.com/networking-and-servers/getting-started-oracle-weblogic-server-12c-developer’s-guide?utm_source=github&utm_medium=repository&utm_campaign=9781849686969)
+* [Angular 2 Design Patterns and Best Practices](https://www.packtpub.com/web-development/angular-2-design-patterns-and-best-practices?utm_source=github&utm_medium=repository&utm_campaign=9781786461728)
 
-* [Oracle SOA Suite Developer's Guide](https://www.packtpub.com/application-development/oracle-soa-suite-developers-guide?utm_source=github&utm_medium=repository&utm_campaign=9781847193551)
+* [TypeScript for Angular Developers](https://www.packtpub.com/web-development/typescript-angular-developers?utm_source=github&utm_medium=repository&utm_campaign=9781786460554)
 
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSe5qwunkGf6PUvzPirPDtuy1Du5Rlzew23UBp2S-P3wB-GcwQ/viewform) if you have any feedback or suggestions.
