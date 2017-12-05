@@ -1,0 +1,7 @@
+.main {
+  min-height: 300px;
+  box-shadow: 0px 0px 5px lightgrey;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 30px;
+}

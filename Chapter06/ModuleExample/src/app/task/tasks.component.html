@@ -1,0 +1,68 @@
+<div class="container text-center">
+  <h3>
+    One point = 25 min, {{ queued | i18nPlural: queueHeaderMapping }} for today
+    <span class="small" *ngIf="queued > 0">
+  (Estimated time :
+  {{ queued * timerMinutes | formattedTime }}
+  )
+  </span>
+  </h3>
+  <p>
+    <span *ngFor="let queuedTask of tasks | queuedOnly: true">
+      <task-icons
+        [task]="queuedTask"
+        [taskTooltip]="tooltip"
+        size="50">
+      </task-icons>
+    </span>
+  </p>
+  <p #tooltip [hidden]="queued === 0">
+    Mouseover for details
+  </p>
+  <h4>Tasks backlog</h4>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Task ID</th>
+        <th>Task name</th>
+        <th>Deliver by</th>
+        <th>Points required</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks; let i = index">
+        <th scope="row">{{ (i+1) }}
+          <span *ngIf="task.queued" class="label label-info">
+         Queued
+         </span>
+        </th>
+        <td>{{ task.name | slice:0:35 }}
+          <span [hidden]="task.name.length < 35">...</span>
+        </td>
+        <td>{{ task.deadline | date: 'fullDate' }}
+          <span *ngIf="task.deadline < today" class="label label-danger">
+         Due
+         </span>
+        </td>
+        <td class="text-center">{{ task.noRequired }}</td>
+        <td>
+          <button type="button" class="btn btn-default btn-xs" [ngSwitch]="task.queued" (click)="toggleTask(task)">
+           <ng-template [ngSwitchCase]="false">
+             <i class="glyphicon glyphicon-plus-sign"></i>
+             Add
+           </ng-template>
+           <ng-template [ngSwitchCase]="true">
+             <i class="glyphicon glyphicon-minus-sign"></i>
+             Remove
+           </ng-template>
+           <ng-template ngSwitchDefault>
+             <i class="glyphicon glyphicon-plus-sign"></i>
+             Add
+           </ng-template>
+         </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

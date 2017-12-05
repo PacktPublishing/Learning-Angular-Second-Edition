@@ -1,0 +1,65 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<table-example></table-example>
+<div>
+  <mat-form-field>
+    <input type="text" matInput placeholder="jedis" [formControl]="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option (onSelectionChange)=select(jedi) *ngFor="let jedi of filteredJedis$ | async" [value]="jedi">
+        {{ jedi }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>
+
+<button mat-button>Normal button</button>
+<button mat-raised-button>Raised button</button>
+<button mat-fab>Fab button</button>
+<button mat-icon-button>
+   <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">home</mat-icon>
+   Icon button
+</button>
+<mat-button-toggle>Button toggle</mat-button-toggle>
+<mat-checkbox [checked]="propertyOnTheComponent">Check me</mat-checkbox>
+<div>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+
+<div>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Name" [formControl]="nameInput">
+    <mat-hint>inidicate error if any</mat-hint>
+    <mat-error *ngIf="nameInput.hasError('required')">
+      This field is required
+    </mat-error>
+  </mat-form-field>
+
+</div>
+<div>
+
+  <button [matMenuTriggerFor]="rootMenu">Trigger menu</button>
+  <mat-menu #rootMenu>
+    <button mat-menu-item>File</button>
+    <button mat-menu-item [matMenuTriggerFor]="subMenu">Export</button>
+  </mat-menu>
+
+  <mat-menu #subMenu>
+    <button mat-menu-item>CSV</button>
+    <button mat-menu-item>PDF</button>
+  </mat-menu>
+</div>
+<div>
+  <mat-grid-list cols=4 rowHeight="300px">
+    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<div>
+  <dialog-example></dialog-example>
+</div>

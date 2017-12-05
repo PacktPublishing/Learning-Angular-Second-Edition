@@ -1,0 +1,22 @@
+@keyframes pulse {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  animation: pulse 1s infinite;
+}
+
+.task {
+  background: red;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
